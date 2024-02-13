@@ -6,9 +6,9 @@ sense.set_rotation(180)
 red = (255, 0, 0)
 
 
-humidity = sense.get_humidity()
+humidity = sense.get_humidity().round(2)
 
-temperature = sense.get_temperature()
+temperature = sense.get_temperature_from_humidity().round(2)
 
 
 sense.show_message("Humidity: %s %%rH" % humidity, text_colour=red)
